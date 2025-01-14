@@ -624,8 +624,6 @@ def run_mission3():
                 print(f"Number of laps : {N_laps}")
                 return  # Exit the simulation
             
-        # After completing the lap, check again (optional)
-        # Not strictly necessary as we've checked after each phase
 
 
 def plot_results():
