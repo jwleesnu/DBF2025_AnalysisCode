@@ -607,7 +607,7 @@ def run_mission3():
         ("Level Flight", lambda: level_flight_simulation(0, direction="left")),
     ]
     
-    ### Repeat Lap2 Until Total Flight Time Exceeds 270 Seconds ###
+    ### Repeat Lap Until Total Flight Time Exceeds flight time ###
     while True:
         lap_start_time = time_list[-1]
         lap_start_index = len(time_list)
@@ -619,7 +619,7 @@ def run_mission3():
             
             # After each phase, check if the time limit is exceeded
             if time_list[-1] > time_limit:
-                # Remove the entire lap's data
+                # it exceed, Remove the entire lap's data
                 truncate_data(time_limit, lap_start_index)
                 print(f"Number of laps : {N_laps}")
                 return  # Exit the simulation
